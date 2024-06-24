@@ -1,9 +1,10 @@
 .container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh;
+    width: 100vw; */
 }
 
 .about-me-card{
@@ -34,3 +35,77 @@
 .about-me-card .bio {
     max-width: 600px;
 }
+
+.work-card{
+    border: 1px solid black;
+    max-width: 800px;
+}
+
+.work-card .cards{
+    display: grid;
+    grid-template-columns:  33% 33% 33%;
+    margin: 0 auto;
+    gap: 3px;
+}
+
+.project-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.project-header{
+    display: flex;
+    padding: 0 3%;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.project-description{
+    padding: 7% 3%;
+    width: fit-content;
+}
+
+.external-link-widget{
+    /* background: url('./assets/open-in-new.svg'); */
+    width: 16px;
+    height: 16px;
+    content: url('./assets/open-in-new.svg');
+}
+
+.contact{
+    /* max-width: 800px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact img{
+    max-width: 250px;
+}
+
+.contact div{
+    max-width: 250px;
+}
+
+.email-section img{
+    width: 16px;
+    padding-right: 5%;
+}
+
+.email-section{
+    width: 100%;
+}
+
+
+.contact .info {
+    min-height: 250px;
+    padding: 0 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+
