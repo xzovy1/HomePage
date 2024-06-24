@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.about-me-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid grey;
+    max-height: 200px;
+    max-width: 900px;
+    margin: 5%;
+}
+
+.about-me-card .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me-card .bio,
+.about-me-card  .header-title{
+    margin: 1.5% 3%;
+}
+
+.header-title {
+    /* padding: 3%; */
+    width: max-content;
+}
+
+.about-me-card .bio {
+    max-width: 600px;
+}
