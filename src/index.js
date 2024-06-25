@@ -1,7 +1,7 @@
 import './style.css';
-import brittany1 from './assets/brittany1.jpeg';
+import brittany1 from './assets/brittany1resize.jpg';
 import defaultProjectImg from './assets/dummy.png';
-import brittanyAndDoc from './assets/brittanyDoc.jpeg';
+import brittanyAndDoc from './assets/brittanyDocResize.jpg';
 import emailWidg from'./assets/email-outline.svg'
 
 function component(){
@@ -11,7 +11,7 @@ function component(){
 
     const bioPhoto = new Image();
     bioPhoto.src = brittany1;
-    bioPhoto.style.maxWidth = '200px'
+    bioPhoto.style.maxWidth = '240px'
     aboutMe.prepend(bioPhoto)
 
     function createCard(name, description, imageSource = defaultProjectImg){
@@ -67,14 +67,14 @@ function component(){
     contact.append(footerImg)
 
     const emailSection = document.querySelector('.email-section');
-    const widgetSpan = document.createElement('span')
+    // const widgetSpan = document.createElement('span')
     const emailWidget = document.createElement('img');
     const emailAddress = document.createElement('span');
     emailWidget.src = emailWidg;
     emailAddress.textContent = 'supina@ualberta.ca'
 
-    widgetSpan.append(emailWidget);
-    emailSection.append(widgetSpan);
+    // widgetSpan.append(emailWidget);
+    emailSection.append(emailWidget);
     emailSection.append(emailAddress);
 
     return container;

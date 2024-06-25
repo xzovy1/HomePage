@@ -1,3 +1,15 @@
+@font-face{
+    font-family: 'Dosis';
+    src: url('./assets/Dosis-Regular.ttf') format('truetype'),
+        url('./assets/Dosis-Medium.ttf') format('truetype'),
+        url('./assets/Dosis-Bold.ttf');
+        /* font-weight: 600; */
+        /* font-style: normal; */
+}
+
+body{
+    font-family: 'Dosis';
+}
 .container{
     display: flex;
     flex-direction: column;
@@ -10,9 +22,13 @@
     justify-content: space-between;
     align-items: center;
     border: 1px solid grey;
-    max-height: 200px;
+    max-height: 285px;
     max-width: 900px;
     margin: 5%;
+}
+
+.about-me-card #main-name{
+    font-size: xx-large;    
 }
 
 .about-me-card .text {
@@ -25,8 +41,24 @@
     margin: 1.5% 3%;
 }
 
+.about-me-card .widget{
+    width: 26px;
+    align-self: flex-end;
+    padding: 0 5%;
+}
+
+.about-me-card .widgets{
+    display: flex;
+    justify-content: end;
+}
+
+#main-name{
+    text-align: center;
+}
+
 .header-title {
     width: max-content;
+    padding: 0 5%
 }
 
 .about-me-card .bio {
@@ -34,7 +66,7 @@
 }
 
 .work-card{
-    border: 1px solid black;
+    
     max-width: 800px;
 }
 
@@ -69,10 +101,13 @@
 }
 
 .contact{
-    width: 95%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    padding: 2%;
+    background-color: #cbcbcb80;
+    
 }
 
 .contact img{
@@ -90,7 +125,10 @@
 }
 
 .email-section{
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 150px;
 }
 
 
