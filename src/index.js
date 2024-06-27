@@ -14,9 +14,11 @@ function component(){
     bioPhoto.style.maxWidth = '240px'
     aboutMe.prepend(bioPhoto)
 
+
     function createCard(name, description, imageSource = defaultProjectImg, address = '#'){
         const cardBody = document.createElement('div');
         cardBody.classList.add('project-card');
+        cardBody.classList.add('elevate')
 
         const projectImg = document.createElement('img');
         projectImg.classList.add('project-image');
@@ -80,7 +82,23 @@ function component(){
     emailSection.append(emailWidget);
     emailSection.append(emailAddress);
 
-    // document.querySelectorAll('.project-description').forEach((e)=> {e.style.display = 'none'})
+    let options = {
+        rootMargin: "0px",
+        threshold: 1.0,
+    }
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('transition');
+                    console.log(entry.target)
+                    return;
+                }
+                entry.target.classList.remove('transition');
+            })
+    },options)
+    const cards = document.querySelectorAll('.elevate');
+    cards.forEach((element) => {observer.observe(element)});
+    // observer.observe(document.querySelector('.elevate'))
 
     return container;
 
