@@ -14,35 +14,38 @@ function component(){
     bioPhoto.style.maxWidth = '240px'
     aboutMe.prepend(bioPhoto)
 
-    function createCard(name, description, imageSource = defaultProjectImg){
-        let cardBody = document.createElement('div');
+    function createCard(name, description, imageSource = defaultProjectImg, address = '#'){
+        const cardBody = document.createElement('div');
         cardBody.classList.add('project-card');
 
-        let projectImg = document.createElement('img');
+        const projectImg = document.createElement('img');
         projectImg.classList.add('project-image');
         projectImg.src = imageSource;
 
-        let titleBar = document.createElement('div');
+        const titleBar = document.createElement('div');
         titleBar.classList.add('project-header')
 
-        let projectTitle = document.createElement('h3');
+        const projectTitle = document.createElement('h3');
         projectTitle.classList.add('project-title');
         projectTitle.textContent = name;
 
-        let projectHeader = document.createElement('div');
+        const projectHeader = document.createElement('div');
         projectHeader.classList.add('widgets');
 
-        let externalLinkWidget = document.createElement('img');
+        const externalLinkAnchor = document.createElement('a');
+        externalLinkAnchor.href = address
+        const externalLinkWidget = document.createElement('img');
         externalLinkWidget.classList.add('external-link-widget');
+        externalLinkAnchor.append(externalLinkWidget);
 
-        let projectDescription = document.createElement('div');
+        const projectDescription = document.createElement('div');
         projectDescription.classList.add('project-description');
         projectDescription.textContent = description;
 
         titleBar.append(projectTitle);
         titleBar.append(projectHeader);
 
-        projectHeader.append(externalLinkWidget)
+        projectHeader.append(externalLinkAnchor)
 
         cardBody.append(projectImg);
         cardBody.append(titleBar);
