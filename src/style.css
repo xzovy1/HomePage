@@ -24,7 +24,7 @@ body{
     border-radius: 10px;
     min-height: 285px;
     max-width: 900px;
-    margin: 5%;
+    margin: 3% 0 0 0;
 }
 
 
@@ -116,7 +116,7 @@ body{
     align-items: center;
     padding: 2%;
     border-radius: 10px;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 
