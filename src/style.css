@@ -21,14 +21,21 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid grey;
-    max-height: 285px;
+    border-radius: 10px;
+    min-height: 285px;
     max-width: 900px;
     margin: 5%;
 }
 
+
+
 .about-me-card #main-name{
     font-size: xx-large;    
+}
+
+.about-me-card img{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .about-me-card .text {
@@ -44,12 +51,14 @@ body{
 .about-me-card .widget{
     width: 26px;
     align-self: flex-end;
-    padding: 0 5%;
+    padding: 0 2%;
 }
 
 .about-me-card .widgets{
     display: flex;
     justify-content: end;
+    padding: 0 6%;
+    
 }
 
 #main-name{
@@ -66,7 +75,7 @@ body{
 }
 
 .work-card{
-    
+    padding: 25px;
     max-width: 800px;
 }
 
@@ -101,18 +110,24 @@ body{
 }
 
 .contact{
-    width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2%;
-    background-color: #cbcbcb80;
-    
+    border-radius: 10px;
+    margin-bottom: 5%;
 }
+
 
 .contact img{
     max-width: 250px;
-    padding-right: 5%;
+    /* padding-right: 5%; */
+}
+
+.footer-image{
+    border-radius: 5px;
+    
 }
 
 .contact div{
@@ -141,5 +156,14 @@ body{
     align-items: flex-start;
 }
 
+.contact,
+.about-me-card{
+    transition-property: box-shadow;
+    transition-duration: 500ms;
+}
 
+.about-me-card:hover,
+.contact:hover{
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 25px 15px;
+}
 
