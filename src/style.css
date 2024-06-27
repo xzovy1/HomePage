@@ -31,8 +31,6 @@ body > * {
     margin: 3% 0 0 0;
 }
 
-
-
 .about-me-card #main-name{
     font-size: xx-large;    
 }
@@ -56,6 +54,7 @@ body > * {
     width: 26px;
     align-self: flex-end;
     padding: 0 2%;
+    margin: 4px;
 }
 
 .about-me-card .widgets{
