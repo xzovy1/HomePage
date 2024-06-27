@@ -77,6 +77,8 @@ function component(){
     emailSection.append(emailWidget);
     emailSection.append(emailAddress);
 
+    // document.querySelectorAll('.project-description').forEach((e)=> {e.style.display = 'none'})
+
     return container;
 
 }

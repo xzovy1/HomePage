@@ -10,6 +10,10 @@
 body{
     font-family: 'Dosis';
 }
+
+body > * {
+    z-index: 0;
+}
 .container{
     display: flex;
     flex-direction: column;
@@ -89,7 +93,16 @@ body{
 .project-card{
     display: flex;
     flex-direction: column;
+    padding: 2%;
 }
+
+.project-card,
+.project-image{
+    border-radius: 5px;
+
+}
+
+
 
 .project-header{
     display: flex;
@@ -102,6 +115,7 @@ body{
 .project-description{
     padding: 7% 3%;
     width: fit-content;
+    /* display: none; */
 }
 
 .external-link-widget{
@@ -157,26 +171,30 @@ body{
 }
 
 .contact,
-.about-me-card{
+.about-me-card,
+.project-card{
     transition-property: box-shadow;
     transition-duration: 450ms;
 }
 
 .about-me-card:hover,
-.contact:hover{
+.contact:hover,
+.project-card:hover{
     border: none;
     box-shadow: rgba(149, 157, 165, 0.5) 0px 25px 15px;
+    z-index: 1;
 }
 
 @media(max-width: 600px){
-    
+
     .about-me-card,
     .contact{
         flex-direction: column;
     }
 
     .contact{
-        width: 100%;
+        width: 75%;
+        margin-bottom: 10%;
     }
 
     .info{
