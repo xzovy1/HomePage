@@ -31,9 +31,25 @@ module.exports = {
             use: ['style-loader', 'css-loader'],
           },
           {
-            test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            test: /\.(mp4|png|svg|jpg|jpeg|gif)$/i,
             type: 'asset/resource', 
           },
+          {
+            test: /\.html$/,
+            use: {
+              loader: "html-loader",
+              options: {
+                sources: {
+                  list: [
+                    // Define tag and attribute to process
+                    { tag: "img", attribute: "src", type: "src" },
+                    { tag: "source", attribute: "src", type: "src" }
+                  ]
+                }
+              }
+            }
+          },
+          
           {
             test: /\.(woff|woff2|eot|ttf|otf)$/i,
             type: 'asset/resource',

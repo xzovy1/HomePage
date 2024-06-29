@@ -2,12 +2,16 @@ import './style.css';
 import brittany1 from './assets/brittany1resize.jpg';
 import defaultProjectImg from './assets/dummy.png';
 import brittanyAndDoc from './assets/brittanyDocResize.jpg';
-import emailWidg from'./assets/email-outline.svg'
+import emailWidg from './assets/email-outline.svg';
+import signVideo from './assets/testSign.mp4';
 
 function component(){
     const container = document.querySelector('.container');
     const aboutMe = document.querySelector('.about-me-card')
     const projectCards = document.querySelector('.work-card .cards')
+
+    // const signature = document.querySelector('video');
+    // signature.src = signVideo;
 
     const bioPhoto = new Image();
     bioPhoto.src = brittany1;
