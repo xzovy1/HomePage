@@ -10,8 +10,8 @@ function component(){
     const aboutMe = document.querySelector('.about-me-card')
     const projectCards = document.querySelector('.work-card .cards')
 
-    // const signature = document.querySelector('video');
-    // signature.src = signVideo;
+    const signature = document.querySelector('video');
+    signature.playbackRate = 0.25;
 
     const bioPhoto = new Image();
     bioPhoto.src = brittany1;
